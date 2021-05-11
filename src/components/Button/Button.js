@@ -1,13 +1,11 @@
 import React from "react";
-import "./Button.css";
+import { ButtonStyle } from "./Button.styles";
 
 function Button(props) {
-  const { variant = "primary", children, ...rest } = props;
+  const { children, ...rest } = props;
   return (
     <div>
-      <button className={`button ${variant}`} {...rest}>
-        {children}
-      </button>
+      <ButtonStyle {...rest}>{children}</ButtonStyle>
     </div>
   );
 }

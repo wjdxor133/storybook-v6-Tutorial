@@ -1,5 +1,5 @@
 //.storybook/preview.js
-import "../src/index.css";
+// import "../src/index.css";
 import { muiTheme } from "storybook-addon-material-ui";
 
 export const decorators = [muiTheme()];

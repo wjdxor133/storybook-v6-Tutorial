@@ -1,37 +1,49 @@
 import React from "react";
 import Button from "./Button";
-// import Center from "../Center/Center";
+// import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
 
 export default {
-  title: "form/Button",
+  title: "socar/Button",
   component: Button,
   args: {
     children: "Button",
   },
-  // decorators: [(story) => <Center>{story()}</Center>],
+  // decorators: [withKnobs],
+  argTypes: {
+    color: {
+      control: {
+        type: "select",
+        options: ["blue", "gray", "coral"],
+        defaultValue: "blue",
+      },
+    },
+  },
 };
-
-export const Primary = () => <Button variant="primary">Primary</Button>;
-export const Secondary = () => <Button variant="secondary">Secondary</Button>;
-export const Success = () => <Button variant="success">Success</Button>;
-export const Danger = () => <Button variant="danger">Danger</Button>;
 
 const Template = (args) => <Button {...args} />;
 
-export const PrimaryA = Template.bind({});
-PrimaryA.args = {
-  variant: "primary",
-  // children: "Primary Args",
+export const LargeFillButton = Template.bind({});
+LargeFillButton.args = {
+  type: "largeFill",
 };
 
-export const LongPrimaryA = Template.bind({});
-LongPrimaryA.args = {
-  ...PrimaryA.args,
-  // children: "Long Primary Args",
+export const RegularFillButton = Template.bind({});
+RegularFillButton.args = {
+  type: "regularFill",
 };
 
-export const SecondaryA = Template.bind({});
-SecondaryA.args = {
-  variant: "secondary",
-  // children: "Secondary Args",
+export const RegularLineButton = Template.bind({});
+RegularLineButton.args = {
+  type: "regularLine",
 };
+
+// const children = text("children", "버튼");
+// const color = select("color", ["blue", "gray", "coral"], "blue");
+
+// export const LargeFillButton = () => {
+//   return (
+//     <Button type="largeFill" color={color}>
+//       {children}
+//     </Button>
+//   );
+// };
