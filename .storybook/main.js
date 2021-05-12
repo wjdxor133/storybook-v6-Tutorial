@@ -6,7 +6,7 @@ module.exports = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-viewport",
     "@storybook/addon-docs",
-    "storybook-addon-material-ui",
-    "@storybook/addon-knobs",
+    // "storybook-addon-material-ui",
+    // "@storybook/addon-knobs",
   ],
 };

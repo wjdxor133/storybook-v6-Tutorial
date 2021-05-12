@@ -1,11 +1,18 @@
 import React from "react";
 import { ButtonStyle } from "./Button.styles";
+import SyncLoader from "react-spinners/SyncLoader";
 
 function Button(props) {
-  const { children, ...rest } = props;
+  const { children, loading, ...rest } = props;
   return (
     <div>
-      <ButtonStyle {...rest}>{children}</ButtonStyle>
+      <ButtonStyle {...rest}>
+        {loading ? (
+          <SyncLoader color="#ffffff" loading={loading} size={10} />
+        ) : (
+          children
+        )}
+      </ButtonStyle>
     </div>
   );
 }
