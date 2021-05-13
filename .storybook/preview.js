@@ -1,8 +1,8 @@
 //.storybook/preview.js
 // import "../src/index.css";
-import { muiTheme } from "storybook-addon-material-ui";
+// import { muiTheme } from "storybook-addon-material-ui";
 
-export const decorators = [muiTheme()];
+// export const decorators = [muiTheme()];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,6 +12,7 @@ export const parameters = {
         ? 0
         : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
   },
+  // docs: { page: null },
   controls: {
     matchers: {
       color: /(background|color)$/i,

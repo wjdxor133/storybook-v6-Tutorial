@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "../Button";
 
 function ButtonGroup(props) {
-  const { buttons, children } = props;
+  const { buttons } = props;
   return (
     <div>
       {buttons.map((button, i) => {
