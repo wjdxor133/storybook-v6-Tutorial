@@ -1,49 +1,54 @@
 import styled, { css } from "styled-components";
 
-const sizes = {
-  large: css`
+const types = {
+  largeFill: css`
     width: 375px;
     height: 64px;
-  `,
-
-  regular: css`
-    width: 327px;
-    height: 54px;
-  `,
-
-  small: css`
-    width: 41px;
-    height: 32px;
-  `,
-};
-
-const types = {
-  fill: css`
     border: none;
     color: white;
     background-color: ${({ color }) => colors[color]};
   `,
 
-  line: css`
+  regularFill: css`
+    width: 327px;
+    height: 54px;
+    border: none;
+    color: white;
+    background-color: ${({ color }) => colors[color]};
+  `,
+
+  regularLine: css`
+    width: 327px;
+    height: 54px;
     border: 1px solid #e9ebee;
     color: ${({ color }) => colors[color]};
     background-color: white;
   `,
-  text: css`
+
+  smallLine: css`
+    width: 41px;
+    height: 32px;
+    border: 1px solid #e9ebee;
+    color: ${({ color }) => colors[color]};
+    background-color: white;
+  `,
+
+  smallText: css`
+    width: 41px;
+    height: 32px;
     border: none;
     color: ${({ color }) => colors[color]};
     background-color: inherit;
   `,
 };
 
-const colors = {
+export const colors = {
   blue: "#00B8FF",
   gray: "#28323C",
   coral: "#FF6F61",
 };
 
 export const ButtonStyle = styled.button`
-  ${({ size }) => sizes[size]}
   ${({ type }) => types[type]}
 
   :disabled {

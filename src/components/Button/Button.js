@@ -5,12 +5,16 @@ import SyncLoader from "react-spinners/SyncLoader";
 
 /** `Button` 컴포넌트는 어떠한 작업을 트리거 할 때 사용합니다.  */
 function Button(props) {
-  const { children, loading, ...rest } = props;
+  const { children, loading, type, ...rest } = props;
   return (
     <div>
-      <ButtonStyle {...rest}>
+      <ButtonStyle type={type} {...rest}>
         {loading ? (
-          <SyncLoader color="#ffffff" loading={loading} size={10} />
+          <SyncLoader
+            color={type === "regularLine" ? "#C5C8CE" : "#fff"}
+            loading={loading}
+            size={10}
+          />
         ) : (
           children
         )}
@@ -25,15 +29,18 @@ Button.propTypes = {
   /**
    * 버튼 타입
    */
-  type: PropTypes.oneOf(["fill", "line", "text"]),
+  type: PropTypes.oneOf([
+    "largeFill",
+    "regularFill",
+    "regularLine",
+    "smallLine",
+    "smallText",
+  ]),
   /**
    * 버튼 색상
    */
   color: PropTypes.oneOf(["blue", "gray", "coral"]),
-  /**
-   * 버튼 사이즈
-   */
-  size: PropTypes.oneOf(["large", "regular", "small"]),
+
   /**
    * 버튼 활성화
    */
@@ -46,11 +53,10 @@ Button.propTypes = {
    * Optional click handler
    */
   // onClick: PropTypes.func,
-};
 
-Button.defaultProps = {
-  type: "fill",
-  color: "blue",
-  size: "large",
-  // onClick: undefined,
+  /**
+   * 버튼 글씨
+   */
+
+  children: PropTypes.string,
 };

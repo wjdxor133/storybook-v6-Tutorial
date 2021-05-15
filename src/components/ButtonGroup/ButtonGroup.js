@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import Button from "../Button";
+import Button from "../Button/Button";
+import { ButtonGroupItem } from "./ButtonGroup.styles";
 
 function ButtonGroup(props) {
   const { buttons } = props;
@@ -18,7 +18,3 @@ function ButtonGroup(props) {
 }
 
 export default ButtonGroup;
-
-const ButtonGroupItem = styled.div`
-  margin-bottom: 8px;
-`;

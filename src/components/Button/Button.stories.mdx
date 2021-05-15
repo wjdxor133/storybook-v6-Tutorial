@@ -1,0 +1,148 @@
+import { Meta, Story, Canvas, Preview } from "@storybook/addon-docs/blocks";
+import Button from "./Button";
+
+<Meta title="mdx/Button" component={Button} />
+
+# Button
+
+With `MDX`, we can define a story for `Button` right in the middle of our
+Markdown documentation.
+
+<!--- This is your Story template function, shown here in React -->
+
+export const Template = (args) => <Button {...args} />;
+
+## LargeFillButton
+
+<Canvas>
+  <Story
+    name="LargeFillBlue"
+    args={{
+      color: "blue",
+      size: "large",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="LargeFillGray"
+    args={{
+      color: "gray",
+      size: "large",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="LargeFillCoral"
+    args={{
+      color: "coral",
+      size: "large",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## RegularFillButton
+
+<Canvas>
+  <Story
+    name="RegularFillBlue"
+    args={{
+      color: "blue",
+      size: "regular",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="RegularFillGray"
+    args={{
+      color: "gray",
+      size: "regular",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="RegularFillCoral"
+    args={{
+      color: "coral",
+      size: "regular",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## RegularLineButton
+
+<Canvas>
+  <Story
+    name="RegularLineBlue"
+    args={{
+      type: "line",
+      color: "blue",
+      size: "regular",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="RegularLineGray"
+    args={{
+      type: "line",
+      color: "gray",
+      size: "regular",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="RegularLineCoral"
+    args={{
+      type: "line",
+      color: "coral",
+      size: "regular",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## SmallLineButton
+
+<Canvas>
+  <Story
+    name="SmallLineBlue"
+    args={{
+      type: "line",
+      color: "blue",
+      size: "small",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="SmallLineGray"
+    args={{
+      type: "line",
+      color: "gray",
+      size: "small",
+      children: "버튼",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
