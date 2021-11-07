@@ -17,17 +17,17 @@ export default {
   },
 };
 
-const Template = (args) => <Button {...args} />;
+// const Template = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  variant: "contained",
-  children: "Default",
-};
+// export const Default = Template.bind({});
+// Default.args = {
+//   variant: "contained",
+//   children: "Default",
+// };
 
-export const Primary = Template.bind({});
-Primary.args = {
-  ...Default.args,
-  color: "primary",
-  children: "Primary",
-};
+// export const Primary = Template.bind({});
+// Primary.args = {
+//   ...Default.args,
+//   color: "primary",
+//   children: "Primary",
+// };

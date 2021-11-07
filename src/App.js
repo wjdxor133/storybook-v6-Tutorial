@@ -2,13 +2,13 @@ import React from "react";
 import { Provider } from "react-redux";
 import store from "./lib/redux";
 
-import InboxScreen from "./components/InboxScreen/InboxScreen";
+import Button from "./components/Button/Button";
 
 import "./index.css";
 function App() {
   return (
     <Provider store={store}>
-      <InboxScreen />
+      <Button />
     </Provider>
   );
 }

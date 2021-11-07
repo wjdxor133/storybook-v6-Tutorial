@@ -1,7 +1,9 @@
 {
-  "name": "storybook-v6",
-  "version": "0.1.0",
-  "private": true,
+  "homepage": "http://wjdxor133.github.io/storybook-v6-Tutorial",
+  "name": "@woosunglim/leo-custom-button",
+  "version": "0.1.1",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@storybook/addon-knobs": "^6.2.9",
@@ -24,7 +26,15 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=8d4abf9e7fb6"
+    "chromatic": "npx chromatic --project-token=8d4abf9e7fb6",
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files",
+    "deploy": "gh-pages -d build",
+    "deploy-storybook": "gh-pages -d storybook-static"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +65,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
@@ -63,6 +75,7 @@
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
     "chromatic": "^5.10.0-canary.0",
+    "gh-pages": "^3.2.3",
     "react-test-renderer": "^17.0.2",
     "storybook-addon-material-ui": "^0.9.0-alpha.24"
   }
